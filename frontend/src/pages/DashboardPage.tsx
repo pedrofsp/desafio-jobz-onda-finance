@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import TableComponent from "@/components/custom/TableComponent";
 import StatisticsComponent from "@/components/custom/StatisticsComponent";
 import type { TransactionT } from "@/types/customComponents";
+import TransferModalComponent from "@/components/custom/TransferModalComponent";
 
 export default function DashboardPage() {
   const transactions: TransactionT[] = [
@@ -41,33 +42,37 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 to-gray-900 text-white p-6 space-y-8">
-      <div className="flex justify-between">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-          <p className="text-gray-400 text-sm">Visão geral das suas finanças</p>
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-gray-950 to-gray-900 text-white p-6 space-y-8">
+        <div className="flex justify-between">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+            <p className="text-gray-400 text-sm">
+              Visão geral das suas finanças
+            </p>
+          </div>
+          <Button
+            onClick={logout}
+            variant="outline"
+            className="border-gray-700 text-gray-300 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500 transition"
+          >
+            Logout
+          </Button>
         </div>
-        <div className="text-sm text-gray-400">Olá, Pedro 👋</div>
-        <Button
-          onClick={logout}
-          variant="outline"
-          className="border-gray-700 text-gray-300 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500 transition"
-        >
-          Logout
-        </Button>
+
+        <StatisticsComponent data={transactions} />
+
+        <Card className="bg-gray-900/70 border-gray-800 backdrop-blur">
+          <CardHeader>
+            <CardTitle>Transações recentes</CardTitle>
+          </CardHeader>
+
+          <CardContent>
+            <TableComponent data={transactions} />
+          </CardContent>
+        </Card>
       </div>
-
-      <StatisticsComponent data={transactions} />
-
-      <Card className="bg-gray-900/70 border-gray-800 backdrop-blur">
-        <CardHeader>
-          <CardTitle>Transações recentes</CardTitle>
-        </CardHeader>
-
-        <CardContent>
-          <TableComponent data={transactions} />
-        </CardContent>
-      </Card>
-    </div>
+      <TransferModalComponent />
+    </>
   );
 }

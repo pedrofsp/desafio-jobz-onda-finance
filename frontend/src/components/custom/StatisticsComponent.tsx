@@ -20,14 +20,14 @@ export default function StatisticsComponent({
   const saldo = entradas - saidas;
 
   return (
-    <div className="w-full flex flex-col justify-between md:flex-row gap-4">
-      <div className="w-full">
+    <div className="flex flex-col justify-between md:flex-row gap-4">
+      <div className="flex-1">
         <StatisticsCardComponent title="Saldo" value={saldo} />
       </div>
-      <div className="w-full">
+      <div className="flex-1">
         <StatisticsCardComponent title="Entradas" value={entradas} plusSign />
       </div>
-      <div className="w-full">
+      <div className="flex-1">
         <StatisticsCardComponent
           title="Saídas"
           value={saidas}
