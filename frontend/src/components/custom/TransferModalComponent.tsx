@@ -1,5 +1,6 @@
 // Libraries
 import { Plus } from "lucide-react";
+import { NumericFormat } from "react-number-format";
 
 // Components
 import {
@@ -42,7 +43,16 @@ export default function TransferModalComponent() {
 
           <div className="space-y-2">
             <Label>Valor</Label>
-            <Input type="number" placeholder="R$ 0,00" />
+
+            <NumericFormat
+              customInput={Input}
+              thousandSeparator="."
+              decimalSeparator=","
+              prefix="R$ "
+              decimalScale={2}
+              allowNegative={false}
+              placeholder="R$ 0,00"
+            />
           </div>
 
           <div className="space-y-2">
