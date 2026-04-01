@@ -1,45 +1,18 @@
 // Services & Helpers
 import { logout } from "@/lib/authRelated";
 
+// Stores
+import { useTransactions } from "@/store/useTransactions";
+
 // Components
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import TableComponent from "@/components/custom/TableComponent";
 import StatisticsComponent from "@/components/custom/StatisticsComponent";
-import type { TransactionT } from "@/types/customComponents";
 import TransferModalComponent from "@/components/custom/TransferModalComponent";
 
 export default function DashboardPage() {
-  const transactions: TransactionT[] = [
-    {
-      id: "1",
-      description: "Salário",
-      date: "25/03/2026",
-      type: "entrada",
-      amount: 5000,
-    },
-    {
-      id: "2",
-      description: "Supermercado",
-      date: "26/03/2026",
-      type: "saida",
-      amount: 320,
-    },
-    {
-      id: "3",
-      description: "Netflix",
-      date: "27/03/2026",
-      type: "saida",
-      amount: 39.9,
-    },
-    {
-      id: "4",
-      description: "Abajur",
-      date: "27/03/2026",
-      type: "saida",
-      amount: 39.9,
-    },
-  ];
+  const transactions = useTransactions((state) => state.transactions);
 
   return (
     <>
