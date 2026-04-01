@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import TableComponent from "@/components/custom/TableComponent";
 import StatisticsComponent from "@/components/custom/StatisticsComponent";
 import TransferModalComponent from "@/components/custom/TransferModalComponent";
+import OndaFinance from "../assets/OndaFinance.png";
 
 export default function DashboardPage() {
   const transactions = useTransactions((state) => state.transactions);
@@ -18,11 +19,17 @@ export default function DashboardPage() {
     <>
       <div className="min-h-screen bg-gradient-to-br from-gray-950 to-gray-900 text-white p-6 space-y-8">
         <div className="flex justify-between">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-            <p className="text-gray-400 text-sm">
-              Visão geral das suas finanças
-            </p>
+          <div className="flex gap-4">
+            <img
+              src={OndaFinance}
+              className="w-15 h-15 rounded-full border border-gray-700 object-cover"
+            />
+            <div>
+              <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+              <p className="text-gray-400 text-sm">
+                Visão geral das suas finanças
+              </p>
+            </div>
           </div>
           <Button
             onClick={logout}

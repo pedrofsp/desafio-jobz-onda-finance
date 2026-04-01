@@ -50,14 +50,14 @@ export default function TransferModalComponent() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <button className="cursor-pointer group fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full h-14 w-14 hover:w-auto px-4 shadow-xl transition-all duration-500 hover:scale-105 active:scale-95 overflow-hidden flex items-center">
+          <span className="mb-1 ml-10 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap font-medium">
+            Fazer transferência
+          </span>
+
           <Plus
             size={24}
             className="absolute left-1/2 -translate-x-1/2 group-hover:left-4 group-hover:translate-x-0 transition-all duration-300"
           />
-
-          <span className="mb-1 ml-10 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap font-medium">
-            Fazer transferência
-          </span>
         </button>
       </DialogTrigger>
 
