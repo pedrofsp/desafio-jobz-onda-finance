@@ -111,6 +111,7 @@ npm run test
 - Uso de **custom hooks** para separar a lógica (funções e react hooks no caso) de UI, deixando o codigo do componente/pagina mais limpo
 - Uso de componentização com foco no clean code
 - Estilização feita com foco no taiilwing/shadcn e uso de CSS somente quando estritamente necessário
+- Padronização do commits e padronização dos imports
 - Mock de backend para foco no frontend
 - Uso de design tokens com Tailwind para facilitar theming
 - Testes focados em lógica (hooks)
@@ -124,6 +125,7 @@ npm run test
 - Sistema de categorias de transações
 - Filtros e busca das transções na dashboard (adição de categorias)
 - Tema claro/escuro (toggle)
+- Aprimoramento do fit com a identidade visual da empresa no design de forma geral
 
 ---
 

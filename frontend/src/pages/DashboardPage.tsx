@@ -53,6 +53,11 @@ export default function DashboardPage() {
             <TableComponent data={transactions} />
           </CardContent>
         </Card>
+
+        <p className="text-center text-gray-500 text-sm mt-8">
+          Developed by{" "}
+          <span className="font-semibold text-gray-400">Pedro Presotto</span>
+        </p>
       </div>
       <TransferModalComponent />
     </>
