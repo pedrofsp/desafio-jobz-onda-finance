@@ -1,18 +1,5 @@
-// Core
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-// Libraries
-import { useForm } from "react-hook-form";
-
-// Services & Helpers
-import { loginRequest } from "@/services/auth";
-
-// Stores
-import { useAuth } from "@/store/useAuth";
-
-// Types
-import type { LoginFormT } from "@/schemas/loginSchema";
+// Custom Hooks
+import { useLogin } from "@/hooks/useLogin";
 
 // Components
 import {
@@ -27,21 +14,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 
 export default function LoginPage() {
-  const { register, handleSubmit } = useForm<LoginFormT>();
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-
-  const navigate = useNavigate();
-  const login = useAuth((state) => state.login);
-
-  const onSubmit = async (data: LoginFormT) => {
-    try {
-      const user = await loginRequest(data);
-      login(user);
-      navigate("/dashboard");
-    } catch (error) {
-      alert("Credenciais inválidas");
-    }
-  };
+  const { register, handleSubmit, onSubmit, isSubmitting } = useLogin();
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-950 px-4">

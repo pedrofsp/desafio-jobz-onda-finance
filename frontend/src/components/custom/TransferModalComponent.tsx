@@ -1,11 +1,9 @@
-import { useState } from "react";
-
 // Libraries
 import { Plus } from "lucide-react";
 import { NumericFormat } from "react-number-format";
 
-// Stores
-import { useTransactions } from "@/store/useTransactions";
+// Cutom Hooks
+import { useTransfer } from "@/hooks/useTransfer";
 
 // Components
 import {
@@ -20,31 +18,16 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 
 export default function TransferModalComponent() {
-  const addTransaction = useTransactions((state) => state.addTransaction);
-
-  const [description, setDescription] = useState("");
-  const [amount, setAmount] = useState<number | null>(null);
-  const [type, setType] = useState<"entrada" | "saida">("entrada");
-  const [open, setOpen] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!description || !amount) return;
-
-    addTransaction({
-      id: crypto.randomUUID(),
-      description,
-      date: new Date().toLocaleDateString("pt-BR"),
-      type,
-      amount,
-    });
-
-    setDescription("");
-    setAmount(null);
-    setType("entrada");
-    setOpen(false);
-  };
+  const {
+    description,
+    setDescription,
+    setAmount,
+    type,
+    setType,
+    open,
+    setOpen,
+    handleSubmit,
+  } = useTransfer();
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
