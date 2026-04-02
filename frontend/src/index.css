@@ -6,3 +6,17 @@
 ---break---
 */
 @custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: 240 20% 2%; /* #000003 */
+  --foreground: 0 0% 83%; /* #d4d4d4 */
+
+  --card: 240 6% 18%; /* #2a3a33 (adaptado) */
+  --border: 240 4% 35%; /* #555458 */
+
+  --primary: 146 68% 34%; /* #1b924d */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 160 15% 20%; /* #2a3a33 */
+  --muted: 240 4% 35%; /* #555458 */
+}

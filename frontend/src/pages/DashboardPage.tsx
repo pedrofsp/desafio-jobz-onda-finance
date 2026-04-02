@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 import TableComponent from "@/components/custom/TableComponent";
 import StatisticsComponent from "@/components/custom/StatisticsComponent";
 import TransferModalComponent from "@/components/custom/TransferModalComponent";
+
+// Assets
 import OndaFinance from "../assets/OndaFinance.png";
 
 export default function DashboardPage() {

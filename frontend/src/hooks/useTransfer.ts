@@ -1,4 +1,7 @@
+// Core
 import { useState } from "react";
+
+// Libraries
 import { useTransactions } from "@/store/useTransactions";
 
 export function useTransfer() {

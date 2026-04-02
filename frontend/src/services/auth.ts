@@ -6,7 +6,7 @@ export const loginRequest = async (data: LoginFormT) => {
     setTimeout(() => {
       console.log(data);
 
-      if (data.email === "admin@email.com" && data.password === "123456") {
+      if (data.email === "user@test.com" && data.password === "123456") {
         resolve({ email: data.email });
       } else {
         reject(new Error("Credenciais inválidas"));
