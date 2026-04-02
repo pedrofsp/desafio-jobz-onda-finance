@@ -6,7 +6,9 @@ import { defineConfig } from "vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: process.env.VITE_BASE_PATH || "/desafio-jobz-onda-finance",
+  base:
+    process.env.VITE_BASE_PATH ||
+    "/desafio-jobz-onda-finance/frontend/desafio-jobz-onda-finance/tree/main/frontend",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
