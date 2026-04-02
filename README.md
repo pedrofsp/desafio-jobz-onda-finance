@@ -15,7 +15,7 @@ https://desafio-jobz-onda-finance-1s27.vercel.app/
 ## Credenciais de acesso
 
 ```txt
-Email: admin@email.com
+Email: user@test.com
 Senha: 123456
 ```
 
