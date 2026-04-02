@@ -4,6 +4,14 @@ Aplicação web de controle financeiro desenvolvida como parte de um desafio té
 
 ---
 
+## Acesso ao projeto
+
+A aplicação está disponível em:
+
+https://desafio-jobz-onda-finance-1s27.vercel.app/
+
+---
+
 ## Credenciais de acesso
 
 ```txt

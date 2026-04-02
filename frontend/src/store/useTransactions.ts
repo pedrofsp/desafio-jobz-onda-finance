@@ -20,6 +20,35 @@ export const useTransactions = create<{
     }),
     {
       name: "transactions-storage",
+
+      onRehydrateStorage: () => (state) => {
+        if (state && state.transactions.length === 0) {
+          state.transactions = [
+            {
+              id: "1",
+              description: "Salário",
+              amount: 5000,
+              type: "entrada",
+              date: new Date("2026-04-01").toLocaleDateString("pt-BR"),
+            },
+
+            {
+              id: "3",
+              description: "Aluguel",
+              amount: 1500,
+              type: "saida",
+              date: new Date("2026-04-02").toLocaleDateString("pt-BR"),
+            },
+            {
+              id: "4",
+              description: "Supermercado",
+              amount: 350,
+              type: "saida",
+              date: new Date("2026-04-01").toLocaleDateString("pt-BR"),
+            },
+          ];
+        }
+      },
     },
   ),
 );
