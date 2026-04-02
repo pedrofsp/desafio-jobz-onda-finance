@@ -81,14 +81,14 @@ export default function TransferModalComponent() {
             <select
               value={type}
               onChange={(e) => setType(e.target.value as "entrada" | "saida")}
-              className="w-full bg-gray-800 border border-gray-700 rounded-md p-2 text-sm"
+              className="cursor-pointer w-full bg-gray-800 border border-gray-700 rounded-md p-2 text-sm"
             >
               <option value="entrada">Entrada</option>
               <option value="saida">Saída</option>
             </select>
           </div>
 
-          <Button type="submit" className="w-full mt-2">
+          <Button type="submit" className="cursor-pointer w-full mt-2">
             Confirmar
           </Button>
         </form>

@@ -19,7 +19,7 @@ export default function DashboardPage() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-gray-950 to-gray-900 text-white p-6 space-y-8">
+      <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white p-6 space-y-8">
         <div className="flex justify-between">
           <div className="flex gap-4">
             <img
@@ -36,7 +36,7 @@ export default function DashboardPage() {
           <Button
             onClick={logout}
             variant="outline"
-            className="border-gray-700 text-gray-300 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500 transition"
+            className="cursor-pointer border-gray-700 text-gray-300 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500 transition"
           >
             Logout
           </Button>
